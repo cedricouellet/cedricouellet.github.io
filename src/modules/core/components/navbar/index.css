@@ -1,0 +1,36 @@
+.navbar {
+    display: flex;
+    font-size: 22px;
+    height: 80px;
+    padding: 25px 90px;
+    gap:60px;
+    background: black !important;
+    box-shadow: 5px 5px 15px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar-link, .navbar-brand {
+    text-decoration: none;
+}
+
+.navbar-link.active {
+    text-decoration: underline;
+}
+
+.navbar-link:hover {
+    opacity: 90%;
+    font-size: 23px;
+}
+
+.navbar-brand {
+    padding: 5px 10px;
+    letter-spacing: 6px;
+    color: black !important;
+    font-size: 22px;
+}
+
+.navbar-divider {
+    height: 100%;
+    width: 2px;
+ }
+

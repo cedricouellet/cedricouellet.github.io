@@ -1,5 +1,36 @@
+/* :root {
+  --color-background: #FAFAF9;
+  --color-text: #6C727F;
+  --color-text-darken: #20293A;
+  --color-foreground: #FFFFFF;
+  --color-primary: #883AE1;
+  --color-primary-lighten: #E6D6FC;
+  --color-divider: #E5EAF0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-text-darken);
+}
+
+div, p, span, input {
+  color: var(--color-text);
+}
+
+hr {
+  color: var(--color-divider);
+} */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: monospace;
 }
