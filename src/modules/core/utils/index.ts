@@ -1,4 +1,4 @@
-export function spaceJoin(...values: (string | undefined | null)[]) {
+export function spaceJoin(...values: (string | undefined | null)[]) : string {
   return values.filter((v) => v !== null && v !== undefined).join(" ");
 }
 

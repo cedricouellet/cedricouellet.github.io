@@ -7,14 +7,20 @@
   --color-primary: #883AE1;
   --color-primary-lighten: #E6D6FC;
   --color-divider: #E5EAF0;
+  --color-input: #6C727F;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: var(--color-text-darken);
 }
 
-div, p, span, input {
+div, p, span {
   color: var(--color-text);
+}
+
+input {
+  border-color: var(--color-input);
+  color: var(--color-input);
 }
 
 hr {
@@ -35,7 +41,16 @@ body, html {
 body {
   font-family: monospace;
   background-color: var(--color-background);
+  font-size: 1em;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 
 /* Custom container definition */
 

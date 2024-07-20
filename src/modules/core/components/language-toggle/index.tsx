@@ -8,9 +8,9 @@ import { spaceJoin } from "../../utils";
 // If ever we need to support more languages, we will need to change it
 // to a language picker in a list of languages
 
-type Props = {
-    style?: React.CSSProperties,
-    className?: string,
+interface Props {
+  style?: React.CSSProperties;
+  className?: string;
 }
 
 export default function LanguageToggle(props: Props) {
@@ -32,6 +32,12 @@ export default function LanguageToggle(props: Props) {
   }
 
   return (
-    <button style={props.style} className={spaceJoin("language-toggle", props.className)} onClick={toggleLanguage}>{getNextLanguage().toUpperCase()}</button>
+    <button
+      style={props.style}
+      className={spaceJoin("language-toggle", props.className)}
+      onClick={toggleLanguage}
+    >
+      {getNextLanguage().toUpperCase()}
+    </button>
   );
 }

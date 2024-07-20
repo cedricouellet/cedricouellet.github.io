@@ -6,9 +6,13 @@ const colors = {
   divider: "var(--color-divider)",
   text: "var(--color-text)",
   textDark: "var(--color-text-darken)",
+  input: "var(--color-input)",
 };
 
-const theme = { colors };
+export { colors };
+
+const theme = {
+  colors,
+};
 
 export default theme;
-export { colors };
