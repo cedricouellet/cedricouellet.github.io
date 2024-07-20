@@ -15,12 +15,11 @@
 }
 
 .navbar-link.active {
-    text-decoration: underline;
+    font-weight: bold;
 }
 
 .navbar-link:hover {
-    opacity: 90%;
-    font-size: 23px;
+    opacity: 85%;
 }
 
 .navbar-brand {
