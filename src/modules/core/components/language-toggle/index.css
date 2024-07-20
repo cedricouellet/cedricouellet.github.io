@@ -5,6 +5,7 @@
     cursor: pointer;
     font-family: inherit;
     color: inherit;
+    text-align: start;
 }
 
 .language-toggle:hover {

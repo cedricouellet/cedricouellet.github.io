@@ -1,6 +1,7 @@
 import "./index.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { spaceJoin } from "../../utils";
 
 // This components toggles the language
 // Since it is a toggle, only two languages are supported by it
@@ -8,7 +9,8 @@ import { useTranslation } from "react-i18next";
 // to a language picker in a list of languages
 
 type Props = {
-    style: React.CSSProperties,
+    style?: React.CSSProperties,
+    className?: string,
 }
 
 export default function LanguageToggle(props: Props) {
@@ -30,6 +32,6 @@ export default function LanguageToggle(props: Props) {
   }
 
   return (
-    <button style={props.style} className="language-toggle" onClick={toggleLanguage}>{getNextLanguage().toUpperCase()}</button>
+    <button style={props.style} className={spaceJoin("language-toggle", props.className)} onClick={toggleLanguage}>{getNextLanguage().toUpperCase()}</button>
   );
 }

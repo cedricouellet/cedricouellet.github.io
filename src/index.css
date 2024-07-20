@@ -1,4 +1,5 @@
 :root {
+  /* Theme colors */
   --color-background: #FAFAF9;
   --color-text: #6C727F;
   --color-text-darken: #20293A;
@@ -34,4 +35,46 @@ body, html {
 body {
   font-family: monospace;
   background-color: var(--color-background);
+}
+
+/* Custom container definition */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    container-type: inline-size;
+    container-name: xs;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body {
+    container-type: inline-size;
+    container-name: xs sm;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    container-type: inline-size;
+    container-name: xs sm md;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body {
+    container-type: inline-size;
+    container-name: xs sm md lg;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  body {
+    container-type: inline-size;
+    container-name: xs sm md lg xl;
+  }
 }

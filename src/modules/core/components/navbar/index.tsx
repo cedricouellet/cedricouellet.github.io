@@ -41,7 +41,8 @@ export default function Navbar() {
         {t("navbar.facturio")}
       </NavLink>
       <LanguageToggle
-        style={{ color: colors.primaryLight, marginLeft: "auto" }}
+        className="navbar-language-toggle"
+        style={{ color: colors.primaryLight }}
       />
     </div>
   );
