@@ -1,4 +1,4 @@
-/* :root {
+:root {
   --color-background: #FAFAF9;
   --color-text: #6C727F;
   --color-text-darken: #20293A;
@@ -18,7 +18,7 @@ div, p, span, input {
 
 hr {
   color: var(--color-divider);
-} */
+} 
 
 * {
   margin: 0;
@@ -33,4 +33,5 @@ body, html {
 
 body {
   font-family: monospace;
+  background-color: var(--color-background);
 }

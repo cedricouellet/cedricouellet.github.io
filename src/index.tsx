@@ -2,23 +2,33 @@ import "./index.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import { BrowserRouter } from "react-router-dom";
-import theme from "./modules/core/config/theme";
-import {configureI18n} from "./modules/core/config/i18n";
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import resourcesToBackend from "i18next-resources-to-backend";
+import Router from "./Router";
 
-configureI18n();
+i18n
+  .use(initReactI18next)
+  .use(
+    resourcesToBackend((language, namespace, callback) => {
+      import(`./locales/${language}/${namespace}.json`)
+        .then((res) => callback(null, res))
+        .catch((err) => {
+          console.error(err);
+          callback(err, null);
+        });
+    })
+  )
+  .init({
+    fallbackLng: ["en", "fr"],
+    supportedLngs: ["en", "fr"],
+    interpolation: {
+      escapeValue: false, // React already safe from XSS
+    },
+  });
 
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
-);
-
-document.body.style.backgroundColor = theme.colors.background;
-
-root.render(
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
+    <Router />
   </React.StrictMode>
 );

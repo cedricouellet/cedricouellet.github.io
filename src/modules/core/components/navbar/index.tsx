@@ -1,16 +1,24 @@
 import "./index.css";
-import { colors } from "../../config/theme";
+import { colors } from "../../theme";
 import { NavLink, NavLinkRenderProps } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "../language-toggle";
 
 export default function Navbar() {
+  const { t } = useTranslation();
+
   function getNavLinkCssClass(props: NavLinkRenderProps) {
     return ["navbar-link", props.isActive ? "active" : ""].join(" ");
   }
 
   return (
-    <div className="navbar" style={{ backgroundColor: colors.primary }}>
-      <NavLink className="navbar-brand" style={{backgroundColor: colors.primary, color: colors.primaryLight}} to="/">
-        CAO
+    <div className="navbar">
+      <NavLink
+        className="navbar-brand"
+        style={{ backgroundColor: colors.primary }}
+        to="/"
+      >
+        {t("navbar.brand")}
       </NavLink>
 
       <div
@@ -23,15 +31,18 @@ export default function Navbar() {
         style={{ color: colors.primaryLight }}
         to="/"
       >
-        Home
+        {t("navbar.home")}
       </NavLink>
       <NavLink
         className={getNavLinkCssClass}
         style={{ color: colors.primaryLight }}
         to="/facturio"
       >
-        Facturio
+        {t("navbar.facturio")}
       </NavLink>
+      <LanguageToggle
+        style={{ color: colors.primaryLight, marginLeft: "auto" }}
+      />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 .navbar {
     display: flex;
     font-size: 22px;
+    width: 100%;
     height: 80px;
     padding: 25px 90px;
     gap:60px;
@@ -34,3 +35,6 @@
     width: 2px;
  }
 
+.language-toggle {
+    margin-left: auto;
+}
