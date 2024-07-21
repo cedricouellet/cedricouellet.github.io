@@ -1,28 +1,9 @@
-.input-wrapper {
-  border-width: 1px;
-  border-style: solid;
-  padding: 5px 0px 5px 5px;
-  border-radius: 5px;
-}
-
-
 .input-wrapper label {
-  color: inherit;
-  font-weight: inherit;
-  opacity: 60%;
-  font-size: 1.1em;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 
 .input-wrapper input {
-  border: none;
-  background: inherit;
-  font-size: inherit;
-  width: 100%;
-}
-
-.input-wrapper input::placeholder {
-  color: inherit;
-  opacity: 50%;
+  font-weight: inherit;
+  font-family: inherit;
 }

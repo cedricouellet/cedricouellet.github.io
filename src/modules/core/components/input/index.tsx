@@ -1,10 +1,12 @@
 import "./index.css";
-import React, { useState } from "react";
-import { colors } from "../../theme";
+import React from "react";
+import { spaceJoin } from "../../utils";
 
 interface Props {
   className?: string;
   style?: React.CSSProperties;
+  inputStyle?: React.CSSProperties;
+  labelStyle?: React.CSSProperties;
   value?: string;
   label?: string;
   type?: React.HTMLInputTypeAttribute;
@@ -14,40 +16,27 @@ interface Props {
 }
 
 export default function Input(props: Props) {
-  let input: HTMLInputElement | null;
-
-  const initialBorderProps = {
-    color: props.style?.borderColor || colors.input,
-    width: "1px"
-  };
-
-  const [borderProps, setBorderProps] = useState(initialBorderProps);
-
   return (
     <div
-      onClick={() => input?.focus()}
-      className="input-wrapper"
-      style={{ borderColor: borderProps.color, borderWidth: borderProps.width, ...props.style }}
+      className={spaceJoin("input-wrapper", props.className)}
+      style={props.style}
     >
-      {props.label !== undefined ? <label style={{color: colors.textDark}}>{props.label}</label> : <></>}
+      {props.label !== undefined ? (
+        <label style={props.labelStyle}>{props.label}</label>
+      ) : (
+        <></>
+      )}
       <input
-        ref={(ref) => (input = ref)}
-        onBlur={() => {
-          setBorderProps(initialBorderProps);
-        }}
-        onFocus={() => {
-          setBorderProps({
-            color: colors.primary,
-            width: "2px"
-          });
-        }}
+        style={props.inputStyle}
         value={props.value}
-        type={props.type}
+        type={props.type || "text"}
         placeholder={props.placeholder}
-        onChange={(e) => props.onChange?.(e.target.value)}
-        onInput={(e: React.ChangeEvent<HTMLInputElement>) =>
-          props.onInput?.(e.target.value)
-        }
+        onChange={(e) => {
+          props.onChange?.(e.target.value);
+        }}
+        onInput={(e: React.ChangeEvent<HTMLInputElement>) => {
+          props.onInput?.(e.target.value);
+        }}
       />
     </div>
   );

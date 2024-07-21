@@ -1,12 +1,9 @@
 const colors = {
-  background: "var(--color-background)",
-  foreground: "var(--color-foreground)",
+  surface: "var(--color-surface)",
   primary: "var(--color-primary)",
-  primaryLight: "var(--color-primary-lighten)",
-  divider: "var(--color-divider)",
+  primaryLight: "var(--color-primary-light)",
   text: "var(--color-text)",
-  textDark: "var(--color-text-darken)",
-  input: "var(--color-input)",
+  textLight: "var(--color-text-light)",
 };
 
 export { colors };

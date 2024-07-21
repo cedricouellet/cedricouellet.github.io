@@ -1,56 +1,104 @@
 :root {
-  /* Theme colors */
-  --color-background: #FAFAF9;
-  --color-text: #6C727F;
-  --color-text-darken: #20293A;
-  --color-foreground: #FFFFFF;
-  --color-primary: #883AE1;
-  --color-primary-lighten: #E6D6FC;
-  --color-divider: #E5EAF0;
-  --color-input: #6C727F;
+  --color-surface: #471739;
+  --color-primary: #feffb0;
+  --color-primary-light: #feffb0be;
+  --color-text: #feffb0;
+  --color-text-light: #feffb0be;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-text-darken);
-}
-
-div, p, span {
-  color: var(--color-text);
-}
-
-input {
-  border-color: var(--color-input);
-  color: var(--color-input);
-}
-
-hr {
-  color: var(--color-divider);
-} 
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body, html {
+body,
+html {
   height: 100%;
   width: 100%;
 }
 
 body {
   font-family: monospace;
-  background-color: var(--color-background);
+  background-color: var(--color-surface);
   font-size: 1em;
+  font-weight: 300;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-text);
+}
+
+div,
+p,
+span,
+hr {
+  color: var(--color-text);
+}
+
+hr {
+  border-color: var(--color-text);
+  border-style: dashed;
+}
+button {
+  cursor: pointer;
+}
+
+input, button {
+  color: var(--color-text);
+  background: inherit;
+
+  /* classic windows style 3D border  */
+  border-color: var(--color-surface);
+  border-style: inset;
+  padding: 6px 12px;
+  /* underline border */
+  /* border-color: var(--color-primary);
+  border-style: dashed;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  padding: 0 0 5px 0; */
+}
+
+input::placeholder {
+  color: var(--color-text-light);
+}
+
+*::selection {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* custom inserted for cool effect */
+  text-transform: lowercase !important;
+}
+
+/* Remove outline on focus elements */
 input:focus,
 select:focus,
 textarea:focus,
 button:focus {
-    outline: none;
+  outline: none;
 }
 
+/*  */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
 
 /* Custom container definition */
 
