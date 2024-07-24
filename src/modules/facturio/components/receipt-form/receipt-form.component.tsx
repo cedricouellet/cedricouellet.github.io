@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Button, NumberInput } from "../../../core/components";
 import { IReceipt } from "../../lib/types";
-import { uniqueId } from "../../../core/utils";
+import { repeat, uniqueId } from "../../../core/utils";
 import { useTranslation } from "react-i18next";
 
 interface IErrors {
@@ -95,7 +95,7 @@ export default function ReceiptForm(props: IProps) {
       contributors: [],
     };
 
-    for (let i = 0; i < contributorCount!; i++) {
+    repeat(contributorCount!, () => {
       receipt.contributors.push({
         id: uniqueId(),
         amountPaid: 0,
@@ -103,7 +103,7 @@ export default function ReceiptForm(props: IProps) {
         name: "",
         splitPercentage: 100.0 / contributorCount!,
       });
-    }
+    });
 
     props.onAdd(receipt);
 
