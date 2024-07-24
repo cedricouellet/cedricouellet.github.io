@@ -1,0 +1,18 @@
+.privacy-consent {
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: auto;
+  padding: 25px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.privacy-consent-text {
+  font-weight: 500;
+}
+
+.privacy-consent-button {
+  margin-left: 10px;
+}

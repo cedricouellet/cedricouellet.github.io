@@ -1,0 +1,10 @@
+{
+    "brand": "@CAO",
+    "facturio": "<Facturio>",
+    "home": "<Home>",
+    "privacy": "<Privacy>",
+    "toggle": {
+        "open": "[+]",
+        "close": "[-]"
+    }
+}

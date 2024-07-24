@@ -1,27 +1,35 @@
 import "./index.css";
-
 import React from "react";
 import ReactDOM from "react-dom/client";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
-import Router from "./Router";
-import { getLanguage } from "./modules/core/services/language";
+import { LanguageService } from "./modules/core/services";
+import App from "./app";
 
 i18n
   .use(initReactI18next)
   .use(
     resourcesToBackend((language, namespace, callback) => {
-      import(`./locales/${language}/${namespace}.json`)
+      const lastNamespacePath = namespace.split("/").pop();
+      import(
+        `./locales/${namespace}/${lastNamespacePath}.translation.${language}.json`
+      )
         .then((res) => callback(null, res))
         .catch((err) => {
-          console.error(err);
+          // by default app makes call to ./locales/translation.translation.[en|fr].json
+          if (namespace !== "translation") {
+            console.error(err);
+          }
           callback(err, null);
         });
     })
   )
   .init({
-    lng: getLanguage(),
+    react: {
+      useSuspense: false,
+    },
+    lng: LanguageService.getLanguage(),
     fallbackLng: ["en", "fr"],
     supportedLngs: ["en", "fr"],
     interpolation: {
@@ -31,6 +39,6 @@ i18n
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Router />
+    <App />
   </React.StrictMode>
 );

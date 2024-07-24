@@ -1,0 +1,14 @@
+{
+    "title": "~ Confidentialité ~",
+    "personalData": "Nous ne collectons aucune donnée personnelle pouvant être utilisée pour vous identifier directement.",
+    "experience": "Nous pouvons utiliser des cookies ainsi qu'un stockage local et de session pour vous offrir une meilleure expérience.",
+    "browser": {
+        "title": "Nous pouvons stocker les informations suivantes dans votre navigateur :",
+        "languagePrefs": "Préférence de langue",
+        "policyAcceptance": "Acceptation de la politique de confidentialité"
+    },
+    "thirdParty": {
+        "title": "Nous pouvons partager les informations suivantes avec des services tiers :",
+        "analytics": "Analyse d'utilisation"
+    }
+}

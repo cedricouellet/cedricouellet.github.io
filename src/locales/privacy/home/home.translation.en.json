@@ -1,0 +1,14 @@
+{
+    "title": "~ Privacy ~",
+    "personalData": "we do not gather any personal data that may be used to directly identify you.",
+    "experience": "We may use cookies as well as local and session storage to give you a better experience.",
+    "browser": {
+        "title": "We may store the following information in your browser:",
+        "languagePrefs": "Language preferences",
+        "policyAcceptance": "Privacy Policy acceptance"
+    },
+    "thirdParty": {
+        "title": "We may share the following information with third-party services:",
+        "analytics": "Usage analytics"
+    }
+}

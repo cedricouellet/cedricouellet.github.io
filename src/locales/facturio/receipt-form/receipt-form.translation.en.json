@@ -1,0 +1,17 @@
+{
+    "amount": "Receipt Amount $",
+    "contributorCount": "Number of Contributors",
+    "errors": {
+        "contributorCount": {
+            "required": "The number of contributors is required",
+            "min": "The number of contributors must be {{value}} or more",
+            "max": "The number of contributors must be less than {{value}}",
+            "type": "The number of contributors must be a whole number (no decimals)"
+        },
+        "amount": {
+            "required": "The amount is required",
+            "min": "The amount must greater than {{value}}",
+            "max": "The amount must be less than {{value}}"
+        }
+    }
+}

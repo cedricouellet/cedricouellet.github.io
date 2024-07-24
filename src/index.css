@@ -1,22 +1,58 @@
 :root {
   --color-surface: #471739;
   --color-primary: #feffb0;
-  --color-primary-light: #feffb0be;
+  --color-primary-light: #9fa06b;
   --color-text: #feffb0;
-  --color-text-light: #feffb0be;
+  --color-text-light: #9fa06b;
 }
 
-body,
-html {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
   height: 100%;
   width: 100%;
 }
 
 body {
-  font-family: monospace;
+  font-family: "Spline Sans Mono", monospace;
   background-color: var(--color-surface);
   font-size: 1em;
   font-weight: 300;
+  /* for cool lowercase effect because i am edgy */
+  text-transform: lowercase !important;
+}
+
+#root {
+  overflow-y: auto;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  text-shadow: none;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  border-color: var(--color-surface);
+  border-style: inset;
+  padding: 6px 12px;
+  background-color: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: var(--color-primary-light) !important;
 }
 
 h1,
@@ -31,51 +67,40 @@ h6 {
 div,
 p,
 span,
-hr {
+hr,
+li {
   color: var(--color-text);
+}
+
+ul,
+ul li {
+  list-style-type: square;
 }
 
 hr {
   border-color: var(--color-text);
   border-style: dashed;
 }
+
 button {
   cursor: pointer;
 }
 
-input, button {
+input,
+button {
   color: var(--color-text);
+  font-family: inherit;
+  font-weight: inherit;
   background: inherit;
 
-  /* classic windows style 3D border  */
+  /* classic retro style 3D border  */
   border-color: var(--color-surface);
   border-style: inset;
   padding: 6px 12px;
-  /* underline border */
-  /* border-color: var(--color-primary);
-  border-style: dashed;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  padding: 0 0 5px 0; */
 }
 
 input::placeholder {
   color: var(--color-text-light);
-}
-
-*::selection {
-  background-color: var(--color-primary);
-  color: var(--color-surface);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  /* custom inserted for cool effect */
-  text-transform: lowercase !important;
 }
 
 /* Remove outline on focus elements */
@@ -140,4 +165,92 @@ input[type="number"] {
     container-type: inline-size;
     container-name: xs sm md lg xl;
   }
+}
+
+/* Font definition */
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 700;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-Bold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 700;
+  font-style: italic;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-BoldItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 400;
+  font-style: italic;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-Italic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 300;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-Light.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 300;
+  font-style: italic;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-LightItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 500;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-Medium.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 500;
+  font-style: italic;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-MediumItalic.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 400;
+  font-weight: normal;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-Regular.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Mono";
+  font-weight: 600;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-SemiBold.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Spline Sans Mono";
+  font-weight: 600;
+  font-style: italic;
+  src: local("Spline Sans Mono"),
+    url("./assets/font/spline-sans-mono/static/SplineSansMono-SemiBoldItalic.ttf")
+      format("truetype");
 }

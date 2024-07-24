@@ -3,5 +3,7 @@ import Navbar from "./navbar";
 import Input from "./input";
 import NumberInput from "./number-input";
 import Button from "./button";
+import Home from "./home";
+import Router from "./router";
 
-export { LanguageToggle, Navbar, Input, NumberInput, Button };
+export { Home, Router, LanguageToggle, Navbar, Input, NumberInput, Button };
