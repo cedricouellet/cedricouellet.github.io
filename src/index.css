@@ -1,9 +1,10 @@
 :root {
-  --color-surface: #471739;
-  --color-primary: #feffb0;
-  --color-primary-light: #9fa06b;
-  --color-text: #feffb0;
-  --color-text-light: #9fa06b;
+  --color-surface: #440d2f;
+  --color-primary: #fbfcc2;
+  --color-primary-light: #b0b18f;
+  --color-text: #fbfcc2;
+  --color-text-light: #b0b18f;
+  --color-error: #ff1b1b;
 }
 
 * {
@@ -12,29 +13,14 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
-  width: 100%;
-}
-
-body {
-  font-family: "Spline Sans Mono", monospace;
-  background-color: var(--color-surface);
-  font-size: 1em;
-  font-weight: 300;
-  /* for cool lowercase effect because i am edgy */
-  text-transform: lowercase !important;
-}
-
-#root {
-  overflow-y: auto;
-}
-
+/* highliting using theme colors */
 ::selection {
   background-color: var(--color-primary);
   color: var(--color-surface);
   text-shadow: none;
 }
+
+/* custom scrollbar */
 
 ::-webkit-scrollbar {
   width: 12px;
@@ -53,6 +39,25 @@ body {
 
 ::-webkit-scrollbar-thumb:active {
   background-color: var(--color-primary-light) !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--color-surface);
+  font-size: 1em;
+  font-weight: 300;
+  font-family: "Spline Sans Mono", monospace;
+}
+
+body,
+body * {
+  /* for cool lowercase effect because i am edgy */
+  text-transform: lowercase !important;
 }
 
 h1,
@@ -111,64 +116,91 @@ button:focus {
   outline: none;
 }
 
-/*  */
-/* Chrome, Safari, Edge, Opera */
+/* Remove number spin button */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-/* Firefox */
+/* Remove number spin button */
 input[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
 
+/* React root */
+#root {
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+/* Custom classes */
+
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0px 350px;
+  width: 100%;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.error {
+  font-size: 0.8em;
+  color: var(--color-error);
+  font-weight: 400;
+}
+
 /* Custom container definition */
 
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  /* Extra small devices (phones, 600px and down) */
   body {
     container-type: inline-size;
     container-name: xs;
   }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+  /* Small devices (portrait tablets and large phones, 600px and up) */
   body {
     container-type: inline-size;
     container-name: xs sm;
   }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+  /* Medium devices (landscape tablets, 768px and up) */
   body {
     container-type: inline-size;
     container-name: xs sm md;
   }
 }
 
-/* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
+  /* Large devices (laptops/desktops, 992px and up) */
   body {
     container-type: inline-size;
     container-name: xs sm md lg;
   }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
   body {
     container-type: inline-size;
     container-name: xs sm md lg xl;
   }
 }
 
-/* Font definition */
-
+/* Fonts definition */
 @font-face {
   font-family: "Spline Sans Mono";
   font-weight: 700;

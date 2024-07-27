@@ -1,0 +1,18 @@
+{
+    "contributorCount": "Nombre de contributeurs",
+    "contributorCountPlaceholder": "Entrez le nombre de contributeurs",
+    "amountPlaceholder": "Entrez le montant",
+    "errors": {
+        "contributorCount": {
+            "required": "Le nombre de contributeurs est requis",
+            "min": "Le nombre de contributeurs doit être d'au moins {{value}}",
+            "max": "Le nombre de contributeurs doit être moins de {{value}}",
+            "type": "Le nombre de contributeurs doit être un chiffre rond (aucune décimale)"
+        },
+        "amount": {
+            "required": "Le montant est requis",
+            "min": "Le montant doit être supérieur à {{value}}$",
+            "max": "Le montant doit être inférieur à {{value}}$"
+        }
+    }
+}

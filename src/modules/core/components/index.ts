@@ -3,7 +3,17 @@ import Navbar from "./navbar";
 import Input from "./input";
 import NumberInput from "./number-input";
 import Button from "./button";
-import Home from "./home";
+import List from "./list";
 import Router from "./router";
+import PrivacyConsent from "./privacy-consent";
 
-export { Home, Router, LanguageToggle, Navbar, Input, NumberInput, Button };
+export {
+  Router,
+  LanguageToggle,
+  Navbar,
+  Input,
+  NumberInput,
+  Button,
+  List,
+  PrivacyConsent
+};

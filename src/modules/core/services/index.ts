@@ -1,2 +1,5 @@
 import LanguageService from "./language";
-export { LanguageService };
+import LocalStorageJsonService from "./local-storage-json";
+import PrivacyService from "./privacy";
+
+export { LanguageService, LocalStorageJsonService, PrivacyService };

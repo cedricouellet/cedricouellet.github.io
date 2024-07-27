@@ -1,0 +1,13 @@
+.privacy-home .privacy-home-content p,
+.privacy-home-content ul {
+  margin-top: 20px;
+}
+
+.privacy-home-content li {
+  margin-left: 25px;
+  margin-bottom: 20px;
+}
+
+.privacy-home-content li:last-child {
+  margin-bottom: 0;
+}

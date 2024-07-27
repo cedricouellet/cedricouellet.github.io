@@ -1,0 +1,10 @@
+{
+    "taxRate": "Taux d'imposition",
+    "taxRatePlaceholder": "Entrez un taux d'imposition",
+    "errors": {
+        "taxRate": {
+            "required": "Le taux d'imposition est requis",
+            "min": "Le taux d'imposition doit être d'au moins {{value}}%"
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { PrivacyContextProvider } from "./modules/privacy/contexts";
+import { PrivacyContextProvider } from "./modules/core/contexts";
 import Router from "./router";
 
 export default function App() {

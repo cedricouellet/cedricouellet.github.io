@@ -1,0 +1,22 @@
+.input-container {
+  max-width: 100%;
+}
+
+.input-label {
+  display: block;
+}
+
+.input-container input {
+  min-width: 70%;
+  max-width: 100%;
+}
+
+.input-suffix {
+  max-width: 30%;
+  min-width: 0%;
+  margin-left: 5px;
+}
+
+.input-error {
+  text-wrap: wrap;
+}

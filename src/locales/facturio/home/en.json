@@ -1,0 +1,12 @@
+{
+    "title": "~ Facturio ~",
+    "configuration": "Configuration",
+    "taxRate": "Tax Rate",
+    "taxRatePlaceholder": "Enter a tax rate",
+    "errors": {
+        "taxRate": {
+            "required": "The tax rate is required",
+            "min": "The tax rate must be at least {{value}}%"
+        }
+    }
+}

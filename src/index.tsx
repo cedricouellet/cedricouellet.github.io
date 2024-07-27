@@ -11,11 +11,12 @@ i18n
   .use(initReactI18next)
   .use(
     resourcesToBackend((language, namespace, callback) => {
-      const lastNamespacePath = namespace.split("/").pop();
       import(
-        `./locales/${namespace}/${lastNamespacePath}.translation.${language}.json`
+        `./locales/${namespace}/${language}.json`
       )
-        .then((res) => callback(null, res))
+        .then((res) => {
+          callback(null, res);
+        })
         .catch((err) => {
           // by default app makes call to ./locales/translation.translation.[en|fr].json
           if (namespace !== "translation") {
